@@ -1,0 +1,23 @@
+# Virtual Environment
+.venv/
+venv/
+*.venv
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+
+# Uploaded documents
+docs/
+
+# Generated vector stores
+vector_stores/
+
+# IDE settings
+.vscode/
+.idea/

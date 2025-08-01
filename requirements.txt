@@ -1,0 +1,12 @@
+PyMuPDF
+sentence-transformers
+faiss-cpu
+langchain
+python-dotenv
+google-generativeai
+langchain-google-genai
+lark
+langchain-community
+langchain-huggingface
+Flask
+sentence-transformers

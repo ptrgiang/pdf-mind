@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Mind</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked@16.1.1/lib/marked.umd.min.js"></script>
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>PDF Mind</h1>
+            </div>
+            <div class="sidebar-content">
+                <h3>Upload Documents</h3>
+                <form id="upload-form" enctype="multipart/form-data">
+                    <label for="file-input" class="file-label">
+                        <span id="file-name-span">Choose PDFs</span>
+                        <input type="file" id="file-input" name="file" accept=".pdf" required multiple>
+                    </label>
+                    <button type="submit" id="upload-button">Upload & Ingest</button>
+                </form>
+                <div id="upload-status"></div>
+
+                <hr>
+
+                <h3>Document Library</h3>
+                <div id="document-list-container">
+                    <ul id="document-list">
+                        <!-- Documents will be listed here -->
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <p>Powered by Gemini</p>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="main-content">
+            <div id="chat-area" class="hidden">
+                <div class="chat-header">
+                    <h2 id="chat-target-title"></h2>
+                </div>
+                <div id="chat-box"></div>
+                <form id="chat-form">
+                    <div class="input-container">
+                        <textarea id="question-input" placeholder="Ask a question..." required rows="1"></textarea>
+                        <button type="submit" id="send-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div id="welcome-screen">
+                <div class="welcome-content">
+                    <div class="logo">M</div>
+                    <h2>Welcome to PDF Mind</h2>
+                    <p>Upload a document in the sidebar to get started.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

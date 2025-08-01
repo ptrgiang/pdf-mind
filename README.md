@@ -31,15 +31,14 @@ PDF Mind is a web-based application that allows you to upload your PDF documents
     ```
 
 2.  **Create a virtual environment and activate it:**
+    First, create the virtual environment:
     ```bash
-    # For Windows
     python -m venv .venv
-    .venv\\Scripts\\activate
-
-    # For macOS/Linux
-    python3 -m venv .venv
-    source .venv/bin/activate
     ```
+    Then, activate it using the command for your shell:
+    - **Windows (Command Prompt):** `.venv\Scripts\activate`
+    - **Windows (PowerShell):** `.venv\Scripts\Activate.ps1`
+    - **macOS/Linux:** `source .venv/bin/activate`
 
 3.  **Install the dependencies:**
     ```bash
@@ -55,8 +54,13 @@ PDF Mind is a web-based application that allows you to upload your PDF documents
 ## Usage
 
 1.  **Run the Flask application:**
+    With the virtual environment activated, run the app using one of the following commands. Using `python -m flask run` is generally more reliable.
     ```bash
-    flask run
+    python -m flask run
+    ```
+    Alternatively, you can directly run the main script:
+    ```bash
+    python app.py
     ```
 
 2.  **Open your browser:**
